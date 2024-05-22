@@ -55,7 +55,7 @@
             </div>
             <p class="aa">Цена: 183*100/2+(1975*635-12986)</p>
             <div class="center">
-                <button id="pon2">Купить</button>
+                <button id="pon1">Купить</button>
             </div>
         </div>
         <div class="bb">
@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-    <form id="buy">
+    <form id="form">
         <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Электронная почта" id="user_email">
         <input type="text" placeholder="Телефон" id="user_phone">
@@ -81,7 +81,7 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
 
-        buy.addEventListener("click", () => {
+        pon.addEventListener("click", () => {
             document.getElementById("main").style.display="none";
             document.getElementById("form").style.display="block";
         });
