@@ -69,21 +69,22 @@
             </div>
         </div>
     </div>
-    <form id="form">
-        <input type="text" placeholder="Имя" id="user_name">
-        <input type="text" placeholder="Электронная почта" id="user_email">
-        <input type="text" placeholder="Телефон" id="user_phone">
-        <div id="error"></div>
-        <button id="ready">Отправить</button>
-    </form>
-    <script>
-        let tg = window.Telegram.WebApp;
-        let buy = document.getElementById("buy");
-        let order = document.getElementById("order");
-
-        pon.addEventListener("click", () => {
-            document.getElementById("main").style.display="none";
-            document.getElementById("form").style.display="block";
-        });
-
 </div>
+<form id="form">
+    <input type="text" placeholder="Имя" id="user_name">
+    <input type="text" placeholder="Электронная почта" id="user_email">
+    <input type="text" placeholder="Телефон" id="user_phone">
+    <div id="error"></div>
+    <button id="ready">Отправить</button>
+</form>
+<script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById("buy");
+    let order = document.getElementById("order");
+
+    pon.addEventListener("click", () => {
+        document.getElementById("main").style.display="none";
+        document.getElementById("form").style.display="block";
+    });
+</script>
+
