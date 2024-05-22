@@ -32,38 +32,58 @@
   margin:0px;
 }
 </style>
-<h1>
-    <p class="center">Kursy</p>
-</h1>
-<div class="aa">
-    <div class="dd">
-        <p class="center">PAZъEZD</p>
-        <div class="center">
-            <img src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200" ;>
+<div id="main">
+
+    <h1>
+        <p class="center">Kursy</p>
+    </h1>
+    <div class="aa">
+        <div class="dd">
+            <p class="center">PAZъEZD</p>
+            <div class="center">
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200" ;>
+            </div>
+            <p class="aa">Цена: 182*100/2+(1975*635-12986)</p>
+            <div class="center">
+                <button id="pon">Купить</button>
+            </div>
         </div>
-        <p class="aa">Цена: 182*100/2+(1975*635-12986)</p>
-        <div class="center">
-            <button id="pon">Купить</button>
+        <div class="cc">
+            <p class="center">Ne PAZъEZD</p>
+            <div class="center">
+                <img  src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200">
+            </div>
+            <p class="aa">Цена: 183*100/2+(1975*635-12986)</p>
+            <div class="center">
+                <button id="pon2">Купить</button>
+            </div>
+        </div>
+        <div class="bb">
+            <p class="center">УHIVERCAM</p>
+            <div class="center">
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200">
+            </div>
+            <p class="aa">Цена: 184*100/2+(1975*635-12986)</p>
+            <div class="center">
+                <button id="pon2">Купить</button>
+            </div>
         </div>
     </div>
-    <div class="cc">
-        <p class="center">Ne PAZъEZD</p>
-        <div class="center">
-            <img  src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200">
-        </div>
-        <p class="aa">Цена: 183*100/2+(1975*635-12986)</p>
-        <div class="center">
-            <button id="pon2">Купить</button>
-        </div>
-    </div>
-    <div class="bb">
-        <p class="center">УHIVERCAM</p>
-        <div class="center">
-            <img src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200">
-        </div>
-        <p class="aa">Цена: 184*100/2+(1975*635-12986)</p>
-        <div class="center">
-            <button id="pon2">Купить</button>
-        </div>
-    </div>
+    <form id="buy">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Электронная почта" id="user_email">
+        <input type="text" placeholder="Телефон" id="user_phone">
+        <div id="error"></div>
+        <button id="ready">Отправить</button>
+    </form>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
+
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.display="none";
+            document.getElementById("form").style.display="block";
+        });
+
 </div>
