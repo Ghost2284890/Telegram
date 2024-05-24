@@ -92,7 +92,6 @@
     let back = document.getElementById("back");
     let pon = document.getElementById("pon");
     let pon2 = document.getElementById("pon2");
-    let phone = document.getElementById("user_phone").value;
     [pon, pon2, buy].forEach((btn) => {
         btn.addEventListener("click", () => {
             document.getElementById("main").style.display="none";
@@ -100,11 +99,13 @@
         });
     });
     back.addEventListener("click", () => {
+    let phone = document.getElementById("user_phone").value;
     if (isNaN(phone)) {
+        document.getElementById("error").innerText = 'Ошибка: введите корректный номер телефона';
+        return;
+    } else {
         document.getElementById("main").style.display="block";
         document.getElementById("form").style.display="none";
-    } else {
-        return;
     }
     });
 </script>
