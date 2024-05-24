@@ -58,7 +58,7 @@
             </div>
             <p class="aa">Цена: 183*100/2+(1975*635-12986)</p>
             <div class="center">
-                <button id="pon1">Купить</button>
+                <button id="pon2">Купить</button>
             </div>
         </div>
         <div class="bb">
@@ -67,7 +67,9 @@
                 <img src="https://avatars.dzeninfra.ru/get-zen_doc/9655966/pub_6470120af2b07d35c9b2c0c3_6470121be413ec26c458990a/scale_1200" width="200">
             </div>
             <p class="aa">Цена: 184*100/2+(1975*635-12986)</p>
-            <button id="buy">Купить</button>
+	    <div class="center">
+               <button id="buy">Купить</button>
+	    </div>
         </div>
     </div>
 </div>
@@ -77,16 +79,32 @@
     <input type="text" placeholder="Телефон" id="user_phone">
     <div id="error"></div>
     <button id="ready">Отправить</button>
+    <div>
+        <button id="back">Назад</button>
+    </div>
 </form>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
+    document.getElementById("form").style.display="none";
     let tg = window.Telegram.WebApp;
     let buy = document.getElementById("buy");
     let ready = document.getElementById("ready");
-
-    buy.addEventListener("click", () => {
-        document.getElementById("main").style.display="none";
-        document.getElementById("form").style.display="block";
+    let back = document.getElementById("back");
+    let pon = document.getElementById("pon");
+    let pon2 = document.getElementById("pon2");
+    let phone = document.getElementById("user_phone").value;
+    [pon, pon2, buy].forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.getElementById("main").style.display="none";
+            document.getElementById("form").style.display="block";
+        });
+    });
+    back.addEventListener("click", () => {
+    if (isNaN(phone)) {
+        document.getElementById("main").style.display="block";
+        document.getElementById("form").style.display="none";
+    } else {
+        return;
+    }
     });
 </script>
-
